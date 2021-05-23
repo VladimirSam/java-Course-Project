@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Оставить заявку</title>
+
+    <link media="all" rel="stylesheet" th:href="@{/css/zakazstyle.css}" type="text/css">
+
 </head>
 <body>
+<header>
+    <div class="header_menu">
 
+        <span class="empty_punkt"></span>
+    </div>
+</header>
+
+<div class="order">
+    <div class="orderbox">
+        <span class="zagolovok">Заполните заявку</span>
+        <hr>
+        <form th:action="@{/order}" method="post">
+            <p><label for="prad" name="prad">Тип праздника:</label>
+                <select id="prad" name="prad" class="inbox1" required>
+                    <option value="" disabled selected hidden>Выбрать...</option>
+                    <option>День рождения</option>
+                    <option>Корпоратив</option>
+                    <option>Выпускной</option>
+                    <option>Свадьба</option>
+                    <option>Новый год</option>
+                </select>
+            <p><label for="ved" name="ved">Наличие ведущего:</label>
+                <select id="ved" name="ved" class="inbox1" required>
+                    <option value="" disabled selected hidden>Выбрать...</option>
+                    <option>Да</option>
+                    <option>Нет</option>
+                </select>
+            <p><label for="noti">Наличие праздичного стола</label>
+                <select id="noti" name="notification" class="inbox1" required>
+                    <option value="" disabled selected hidden>Выбрать...</option>
+                    <option>Да</option>
+                    <option>Нет</option>
+                </select>
+            <p><label for="request">Личные пожелания</label>
+                <textarea type='text' name="request" id="request" class="inbox2 request" required></textarea>
+
+
+            <p><input type='submit' value="Отправить заявку" class="butt2">
+        </form>
+    </div>
+</div>
 </body>
 </html>

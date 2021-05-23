@@ -5,9 +5,12 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import ru.krjava.event_agency.domain.OrderForm;
 import ru.krjava.event_agency.domain.User;
+import ru.krjava.event_agency.repo.OrderRepo;
 import ru.krjava.event_agency.repo.UserRepo;
 
 @Controller
@@ -17,6 +20,8 @@ public class HomeController {
 
     @Autowired
     UserRepo userRepo;
+    @Autowired
+    OrderRepo orderRepo;
     @GetMapping
     public String index(@AuthenticationPrincipal User user, Model model){
         if (user!= null){
@@ -32,6 +37,20 @@ public class HomeController {
     public String login(){
         return "login";
     }
+    @GetMapping("/order")
+    public String Addingorder(){
+
+        return "order";
+    }
+
+
+    @PostMapping("/order")
+    public String processOrder(@AuthenticationPrincipal User user, OrderForm form){
+
+        orderRepo.save(form.toOrder(user));
+
+        return "redirect:/foruser";
+    }
 
     @PreAuthorize(value = "hasAnyAuthority('ADMIN', 'USER')")
     @GetMapping("/foruser")
@@ -46,5 +65,6 @@ public class HomeController {
     }
     @GetMapping("/zakaz")
     public String zakaz() { return "zakaz";}
-
+    @GetMapping("/index")
+    public String index() { return "index";}
     }

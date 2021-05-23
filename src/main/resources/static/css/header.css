@@ -3,16 +3,20 @@
 
 .header{
     width: 100%;
-    background: #6495ED;
-    height: 70px;
+    background: #dbc988;
+    height: 55px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 .container{
     margin-left:auto;
     margin-right:auto;
-    width: 95%; /* Ширина слоя в пикселах */
-    height: 300px; /* Высота слоя в пикселах */
-    margin-top: 50px;	/* Отступ сверху */
-    background: #87CEEB; /* Цвет фона */
+    width: 40%; /* Ширина слоя в пикселах */
+    height: 200px; /* Высота слоя в пикселах */
+    margin-top: 60px;	/* Отступ сверху */
+    background: #e1bca6; /* Цвет фона */
     border: solid 1px black; /* Параметры рамки вокруг */
     padding: 10px; /* Поля вокруг текста */
     border-radius: 10px;
@@ -21,7 +25,7 @@
     font-family: Сomic Sans MS;
 }
 
-a {
+.header a {
     font-family: Lucida Sans Unicode;
     color: #000000;
     text-transform: uppercase;
@@ -29,5 +33,25 @@ a {
     letter-spacing: 5px;
     text-decoration: none;
     padding-left: 20px;
+    float: right;
+}
+body{
+    background-image: url("../images/fon1.jpg") ;
+}
+.container1 {
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    height: 200px;
+    margin-top: 50px;
+    border-radius: 5px;
+    background: #fff6cdbf;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Bandicoot;
+}
+.header h1{
+   float: left;
 
 }

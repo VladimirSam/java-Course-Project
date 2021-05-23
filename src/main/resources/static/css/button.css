@@ -1,13 +1,13 @@
 .button1 {
     display: inline-block;
-    color: #1e1166;
+    color: #7f1b1b;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 10px;
     text-decoration: none;
     font-family: Tahoma;
     font-size: 30px;
     line-height: 1.5;
     font-weight: 100;
-    background-color: #92bbff
+    background-color: #f5fbaf;
 }
 
