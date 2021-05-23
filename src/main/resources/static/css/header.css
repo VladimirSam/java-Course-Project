@@ -42,7 +42,7 @@ body{
     margin-left:auto;
     margin-right:auto;
     width: 90%;
-    height: 200px;
+    height: 150px;
     margin-top: 50px;
     border-radius: 5px;
     background: #fff6cdbf;
@@ -51,7 +51,13 @@ body{
     font-size: 20px;
     font-family: Bandicoot;
 }
-.header h1{
-   float: left;
-
+.empty_punkt{
+    flex-grow: 1;
+}
+.header_logo {
+    justify-self: flex-start;
+}
+.header_img{
+    height: 47px ;
+    width: auto;
 }

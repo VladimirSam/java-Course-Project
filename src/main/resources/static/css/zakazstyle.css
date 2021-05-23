@@ -1,0 +1,98 @@
+html{
+    background-image: url("../images/fon1.jpg");
+}
+
+html, body{
+    padding: 0 4%;
+}
+
+.order{
+    height:100%;
+    display: flex;
+}
+
+.orderbox{
+    background-color: #ecd9c2;
+    margin: auto;
+    width: 800px;
+    height: 760px;
+    border: 1px solid #f63131;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px 0px rgba(0, 00, 00, 0.4);
+}
+
+.orderbox p{
+    width: 90%;
+    display: inline-table;
+    padding: 5px 20px;
+    margin-bottom:2px;
+}
+
+.zagolovok{
+    font: bold 50px "Bebas Neue Bold";
+    margin-bottom: 10px;
+    margin-left: 24%;
+}
+
+label {
+    font-family: "Bebas Neue Bold";
+    float: left;
+    width: 100%;
+    top: 0px;
+    text-align: left;
+    line-height: 2.5;
+}
+
+.inbox1{
+    width: 100%;
+    height: 32px;
+    padding: 0px 10px;
+    background-color: #e8c7ae;
+    border: none;
+    display: inline;
+    color: #303030;
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+    border-radius: 5px;
+}
+
+.inbox2{
+    width: 98%;
+    height: 32px;
+    padding: 0px 10px;
+    background-color: #e8c7ae;
+    border: none;
+    display: inline;
+    color: #303030;
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+    border-radius: 5px;
+}
+
+.request{
+    height: 100px;
+    font-size: 16px;
+}
+
+.butt2{
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    font-family: "Bebas Neue Bold";
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    background-color: #dd8e51;
+    border: 1px #6f1c1c solid;
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.orderbox hr{
+    width: 90%;
+}
