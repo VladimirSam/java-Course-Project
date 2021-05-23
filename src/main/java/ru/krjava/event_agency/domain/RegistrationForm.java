@@ -19,6 +19,7 @@ public class RegistrationForm {
         user.setPassword(passwordEncoder.encode(password));
         user.setPhone(phone);
         user.setUsername(username);
+
         user.setRoles(Collections.singleton(Role.USER));
         return user;
     }
